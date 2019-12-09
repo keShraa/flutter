@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/models/quiz.dart';
+import 'package:quiz/widgets/quiz.dart';
 import 'package:quiz/widgets/custom_text.dart';
 
 class MyHomePage extends StatefulWidget {
