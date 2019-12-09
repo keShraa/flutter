@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/models/quiz.dart';
+import 'package:quiz/widgets/custom_text.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -30,8 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
             new Card(
               elevation: 6.0,
               child: new Container(
-                width: MediaQuery.of(context).size.width / 1.5,
-                height: MediaQuery.of(context).size.height / 3.5,
+                width: MediaQuery.of(context).size.width * 0.8,
+                height: MediaQuery.of(context).size.width * 0.8,
                 child: new Image.asset('assets/cover.jpg',
                   fit: BoxFit.cover,
                 ),
@@ -39,13 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             new RaisedButton(
               color: Colors.blue,
-              textColor: Colors.white,
               padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
-              child: new Text("Start the quiz",
-                style: new TextStyle(
-                  fontSize: 20.0,
-                ),
-              ),
+              child: new CustomText("Start the quiz", factor: 1.5),
               onPressed: toQuiz,
             ),
           ],
